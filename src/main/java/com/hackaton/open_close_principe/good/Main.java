@@ -52,7 +52,7 @@ abstract class NotificationData implements Notification {
     }
 }
 
-class EmailNotification extends NotificationData implements Notification {
+class EmailNotification extends NotificationData {
     private static final String type = "Email";
     private static final double PRICE_PER_RECIPIENT = 0.1;
 
@@ -62,7 +62,7 @@ class EmailNotification extends NotificationData implements Notification {
     }
 
     @Override
-    public Double getPricePerRecipient() {
+    public double getPricePerRecipient() {
         return PRICE_PER_RECIPIENT;
     }
 
@@ -73,7 +73,7 @@ class EmailNotification extends NotificationData implements Notification {
 
 }
 
-class SMSNotification extends NotificationData implements Notification {
+class SMSNotification extends NotificationData {
     private static final String type = "SMS";
     public static final double PRICE_PER_RECIPIENT = 0.75;
 
@@ -83,7 +83,7 @@ class SMSNotification extends NotificationData implements Notification {
     }
 
     @Override
-    public Double getPricePerRecipient() {
+    public double getPricePerRecipient() {
         return PRICE_PER_RECIPIENT;
     }
 
@@ -94,7 +94,7 @@ class SMSNotification extends NotificationData implements Notification {
 
 }
 
-class PushNotification extends NotificationData implements Notification {
+class PushNotification extends NotificationData  {
     private static final String type = "Push";
     public static final double PRICE_PER_RECIPIENT = 0.25;
 
@@ -104,7 +104,7 @@ class PushNotification extends NotificationData implements Notification {
     }
 
     @Override
-    public Double getPricePerRecipient() {
+    public double getPricePerRecipient() {
         return PRICE_PER_RECIPIENT;
     }
 
@@ -115,7 +115,7 @@ class PushNotification extends NotificationData implements Notification {
 
 }
 
-class TelegramNotification extends NotificationData implements Notification {
+class TelegramNotification extends NotificationData {
     private static final String type = "Telegram";
     public static final double PRICE_PER_RECIPIENT = 0.4;
 
@@ -125,7 +125,7 @@ class TelegramNotification extends NotificationData implements Notification {
     }
 
     @Override
-    public Double getPricePerRecipient() {
+    public double getPricePerRecipient() {
         return PRICE_PER_RECIPIENT;
     }
 
