@@ -38,8 +38,8 @@ class NotificationCalculator {
 
 
 abstract class NotificationData implements Notification {
-    private int recipientsCount;
-    private String message;
+    private final int recipientsCount;
+    private final String message;
 
     public NotificationData(String message, int recipientsCount) {
         this.recipientsCount = recipientsCount;
@@ -47,7 +47,7 @@ abstract class NotificationData implements Notification {
     }
 
     @Override
-    public Integer getRecipientsCount() {
+    public int getRecipientsCount() {
         return recipientsCount;
     }
 }
