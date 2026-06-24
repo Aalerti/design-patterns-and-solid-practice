@@ -37,16 +37,19 @@ class NotificationCalculator {
 }
 
 
-abstract class NotificationData {
-    public int recipientsCount;
-    public String message;
+abstract class NotificationData implements Notification {
+    private int recipientsCount;
+    private String message;
 
     public NotificationData(String message, int recipientsCount) {
         this.recipientsCount = recipientsCount;
         this.message = message;
     }
 
-
+    @Override
+    public Integer getRecipientsCount() {
+        return recipientsCount;
+    }
 }
 
 class EmailNotification extends NotificationData implements Notification {
@@ -68,10 +71,6 @@ class EmailNotification extends NotificationData implements Notification {
         return type;
     }
 
-    @Override
-    public Integer getRecipientsCount() {
-        return recipientsCount;
-    }
 }
 
 class SMSNotification extends NotificationData implements Notification {
@@ -93,17 +92,12 @@ class SMSNotification extends NotificationData implements Notification {
         return type;
     }
 
-    @Override
-    public Integer getRecipientsCount() {
-        return recipientsCount;
-    }
 }
 
 class PushNotification extends NotificationData implements Notification {
     private static final String type = "Push";
     public static final double PRICE_PER_RECIPIENT = 0.25;
-    private int recipientsCount;
-    private String message;
+
 
     public PushNotification(String message, int recipientsCount) {
         super(message, recipientsCount);
@@ -119,10 +113,6 @@ class PushNotification extends NotificationData implements Notification {
         return type;
     }
 
-    @Override
-    public Integer getRecipientsCount() {
-        return recipientsCount;
-    }
 }
 
 class TelegramNotification extends NotificationData implements Notification {
@@ -144,9 +134,6 @@ class TelegramNotification extends NotificationData implements Notification {
         return type;
     }
 
-    @Override
-    public Integer getRecipientsCount() {
-        return recipientsCount;
-    }
+
 }
 
