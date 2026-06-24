@@ -24,9 +24,9 @@ public class Main {
 interface Notification {
     String getType();
 
-    Double getPricePerRecipient();
+    double getPricePerRecipient();
 
-    Integer getRecipientsCount();
+    int getRecipientsCount();
 }
 
 class NotificationCalculator {
