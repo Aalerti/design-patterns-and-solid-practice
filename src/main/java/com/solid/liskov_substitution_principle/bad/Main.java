@@ -1,4 +1,4 @@
-package com.hackaton.liskov_substitution_principle.bad;
+package com.solid.liskov_substitution_principle.bad;
 
 import java.util.List;
 

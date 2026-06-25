@@ -1,4 +1,4 @@
-package com.hackaton.open_close_principe.good;
+package com.solid.open_close_principe.good;
 
 class EmailNotification extends NotificationData {
     private static final String TYPE = "Email";
